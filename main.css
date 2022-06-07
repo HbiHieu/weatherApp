@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url('https://images2.alphacoders.com/100/1006752.png') top center / cover no-repeat;
+  overflow: hidden;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.weather__modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather__app {
+    height: 650px;
+    width: 370px;
+    background: url('https://mfiles.alphacoders.com/838/838068.jpg') top center / contain no-repeat;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.weather__app--contain {
+  text-align: center;
+  color: white;
+  margin: 0 60px;
+  text-shadow: 0 0 5px #333333;
+  font-weight: bold;
+}
+
+.weather__app--header {
+   margin-top: 120px;
+   font-size: 32px;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.weather__app--input input,
+.weather__app--submitBtn {
+  width: 100%;
+  padding: 8px 0;
+}
+
+.weather__app--input input{
+  border-radius: 10px 0 10px 0;
+  border-bottom: 1px solid #145f2c;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 20px;
+  outline: none;
+}
+
+.weather__app--submitBtn {
+  background-color: aqua;
+  opacity: 0.8;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin: 7px 0;
+  cursor: pointer;
+}
+.weather__app--submitBtn:hover {
+  opacity: 0.6;
+}
+
+.weather__app--require {
+   color: black;
+   text-shadow: 0 0 1px #fff;
+}
+
+.weather__app--icons {
+  font-size: 45px;
+  margin: 15px 0;
+}
+
+.weather__app--address {
+   font-weight: bold;
+   font-size: 22px;
+}
+
+.weather__app--date {
+   margin: 10px 0;
+}
+
+.weather__app__footer {
+  text-align: left;
+  margin-top: 5px;
+  border-top: 2px solid #333;
+}
+
+.weather__app__footer-Temp {
+  margin-top: 5px;
+}
+
+.weather__app__footer-Weather {
+  margin: 7px 0;
+}
+
+.weather__app__footer-TempRange {
+
+}
+
+hr{
+  width: 50px;
+  border-color: transparent;
+  border-right-color: rgba(255, 255, 255, 0.7);
+  border-right-width: 50px;
+  position: absolute;
+  bottom: 100%;
+  transform-origin: 100% 50%;
+  animation-name: rain;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rain {
+  from {
+   transform: rotate(105deg) translateX(0);
+  }
+ 
+  to {
+   transform: rotate(105deg) translateX(calc(100vh + 20px));
+  }
+}
