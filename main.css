@@ -185,3 +185,10 @@ html {
 
 }
 
+@media( max-width : 740px ) {
+
+.weather__app--music {
+    top:70px;
+}
+
+}
