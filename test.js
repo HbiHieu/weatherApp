@@ -6,6 +6,9 @@ var temp = document.querySelector('.weather__app__footer-Temp');
 var weatherCity = document.querySelector('.weather__app__footer-Weather');
 var tempRange = document.querySelector('.weather__app__footer-TempRange');
 var rain = document.querySelector('.weather-rain');
+var playMusic = document.querySelector('.weather__app--musicIcon');
+var playMusicE = document.querySelector('.weather__app--musicIcon i');
+var playMusicText = document.querySelector('.weather__app--textMusic');
 
 var date = new Date();
 
@@ -56,6 +59,7 @@ var daTe = date.getDate();
 var year = date.getFullYear();
 var day = date.getDay();
 var hours = date.getHours();
+var checkPlay = 0;
 
 
 
@@ -118,4 +122,21 @@ submitBtn.addEventListener('click',function(){
     })
 })
 
+playMusic.addEventListener('click',()=>{
+   if(checkPlay == 0) {
+    playMusicE.classList.add('play');
+    checkPlay = 1;
+    playMusicE.innerHTML = `<audio controls autoplay loop>
+    <source src="./music/y2mate.com - Grand EscapeHardest Grand Piano Arrangement  Weathering with You OST 天気の子.mp3" type="audio/mp3">
+</audio>  `;
+    playMusicText.classList.add('play');
+   }
+   else {
+       playMusicE.classList.remove('play');
+       checkPlay = 0;
+       playMusicE.innerHTML = ``;
+       playMusicText.classList.remove('play');
+   }
+})
 
+ 

@@ -36,6 +36,7 @@ html {
     background: url('https://mfiles.alphacoders.com/838/838068.jpg') top center / contain no-repeat;
     border-radius: 10px;
     opacity: 1;
+    position: relative;
 }
 
 .weather__app--contain {
@@ -44,6 +45,71 @@ html {
   margin: 0 60px;
   text-shadow: 0 0 5px #333333;
   font-weight: bold;
+}
+
+.weather__app--music {
+  position: absolute;
+  right: 10px;
+  top : 10px;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden; 
+  border-radius: 20px;
+}
+
+.weather__app--textMusic {
+  width: 73%;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: 0.5s;
+  transform: translateX(236px);
+}
+
+.weather__app--textMusic p {
+  width: 84%;
+  color: #333;
+  text-shadow: none;
+
+}
+
+.weather__app--textMusic span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.weather__app--textMusic.play{
+   transform: translateX(0);
+}
+
+
+
+.weather__app--musicIcon {
+  position: fixed;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #333;
+}
+
+.weather__app--musicIcon .play{
+  animation: rotate 4s linear 0s infinite;
+}
+
+.weather__app--musicIcon audio{
+  display: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.weather__app--musicIcon:hover {
+  cursor: pointer;
 }
 
 .weather__app--header {
